@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Job</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>NaijaJobs</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="about.html">About</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <main></main>
+  <section class="apply-section">
+    <h2>Job Application</h2>
+    <p id="jobTitle"></p>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Email" required>
+      <input type="text" placeholder="Phone Number" required>
+      <textarea placeholder="Cover Letter"></textarea>
+      <button type="submit">Submit Application</button>
+
+    </form>
+  </section>
+</main>
+    <footer>
+      <p>2026 NaijaJobs</p>
+    </footer>
+    <script>
+      const params = new Promise((resolve, reject) => {
+        URLSearchParams(window.location.search);
+        const job = params.get("job");
+        document.getElementById("jobTitle").textContent = job;
+      })
+    </script>
+  
+  
+</body>
+</html>
